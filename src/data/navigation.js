@@ -6,12 +6,12 @@ export const NavbarMenu = [
   },
   {
     id: 2,
-    title: "Servicos",
+    title: "Serviços",
     link: "#servicos",
   },
   {
     id: 3,
-    title: "Contato",
-    link: "#contato",
+    title: "Sobre",
+    link: "#sobre",
   },
 ];

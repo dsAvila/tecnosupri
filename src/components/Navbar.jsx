@@ -8,20 +8,20 @@ const Navbar = () => {
   const [open, setOpen] = React.useState(false);
   return (
     <>
-      <nav>
-        <div className="container flex justify-between items-center py-8">
+      <nav className="fixed top-0 w-full z-50 bg-white backdrop-blur-sm">
+        <div className="container mx-auto max-w-7xl flex justify-between items-center py-6 px-6 md:px-12">
           <div className="flex items-center">
             <a href="/">
               <img
                 src={Logo}
                 alt="Tecnosupri"
-                className="h-5 md:h-8 w-auto object-contain"
+                className="h-10 md:h-8 w-auto object-contain"
               />
             </a>
           </div>
 
           <div className="hidden md:block">
-            <ul className="flex items-center gap-6 text-gray-600">
+            <ul className="flex items-center gap-8 text-gray-600">
               {NavbarMenu.map((item) => {
                 return (
                   <li key={item.id}>
@@ -34,6 +34,14 @@ const Navbar = () => {
                   </li>
                 );
               })}
+              <li>
+                <a
+                  href="#contato"
+                  className="bg-primary text-white px-4 py-2 rounded-2xl font-bold shadow-lg shadow-primary/30 hover:shadow-primary/50 "
+                >
+                  Falar com Especialista
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -43,7 +51,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      <ResponsiveMenu open={open}/>
+      <ResponsiveMenu open={open} setOpen={setOpen} />
     </>
   );
 };

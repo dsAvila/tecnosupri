@@ -3,3 +3,8 @@
 html {
   scroll-behavior: smooth;
 }
+
+@theme {
+  --color-primary: #004499;
+  --color-secondary: #dd0000;
+}

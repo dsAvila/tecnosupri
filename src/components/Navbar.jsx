@@ -15,12 +15,12 @@ const Navbar = () => {
               <img
                 src={Logo}
                 alt="Tecnosupri"
-                className="h-10 md:h-8 w-auto object-contain"
+                className="h-6 md:h-8 w-auto object-contain"
               />
             </a>
           </div>
 
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <ul className="flex items-center gap-8 text-gray-600">
               {NavbarMenu.map((item) => {
                 return (
@@ -45,7 +45,8 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <div className="md:hidden" onClick={() => setOpen(!open)}>
+          {/* Mobile Menu */}
+          <div className="lg:hidden" onClick={() => setOpen(!open)}>
             <MdMenu className="text-4xl" />
           </div>
         </div>
